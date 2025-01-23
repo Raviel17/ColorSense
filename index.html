@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorSense</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-card">
+            <div class="badges-container">
+                <div id="health" class="health">❤️❤️❤️</div>
+                <div id="levelBadge" class="level-badge">Level 1</div>
+                <button id="soundToggle" class="sound-toggle" onclick="toggleSound()">🔊</button>
+            </div>
+            <h1>ColorSense</h1>
+            <p class="description">Tebak warna yang sesuai dengan kode RGB!</p>
+            
+            <div class="difficulty">
+                <button onclick="setDifficulty(4)" class="active">Mudah</button>
+                <button onclick="setDifficulty(6)">Sedang</button>
+                <button onclick="setDifficulty(9)">Sulit</button>
+            </div>
+
+            <div class="rgb-code" id="rgbCode"></div>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="color-grid" id="colorGrid"></div>
+            <div class="score-container">
+                <span>Skor:</span>
+                <span id="score" class="score">0</span>
+                <span class="high-score">Tertinggi: <span id="highScore">0</span></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="gameOver" class="game-over">
+        <div class="game-over-content">
+            <h2>Game Over!</h2>
+            <p>Skor Akhir: <span id="finalScore">0</span></p>
+            <p>Skor Tertinggi: <span id="finalHighScore">0</span></p>
+            <p>Level Tercapai: <span id="finalLevel">1</span></p>
+            <button onclick="resetGame()">Main Lagi</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
